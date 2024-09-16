@@ -4,7 +4,7 @@
 lives = 3 
 score = 50540 
 name= "player"
-
+int(input("Please type"))
 
 
 # print(f"Hello {name}! You scared {score} points.\n")

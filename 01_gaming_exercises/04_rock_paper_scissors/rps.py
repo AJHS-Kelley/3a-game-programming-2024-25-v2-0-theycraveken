@@ -25,10 +25,6 @@ if isCorrect == "yes":
 else:
     playerName = input("Please type your name and press enter.\n")
 
-
-
-
-
 # THE RULES using MULTI-LINE STRINGS
 print(""""
 Welcome to Rock, Paper, Scissors Robot!
@@ -42,8 +38,6 @@ The cpu will select ROCK, PAPER or SCISSORS at randoms.
 2. SCISSORS BEATS PAPER!
 3. PAPER BEATS ROCK!
 """) 
-
-
 
 #Multi-LINE STRINGS CAN BE USED AS BIG COMMENTS
 """" 
@@ -67,9 +61,7 @@ else:
     
     
     
-    
-    
-    # let cpu select choice at random 
+ # let cpu select choice at random 
     cpuChoice = random .randint(0, 2)    #randomly select 0, 1, 0r 2. 
     if cpuChoice == 0:
         cpuChoice = "rock"

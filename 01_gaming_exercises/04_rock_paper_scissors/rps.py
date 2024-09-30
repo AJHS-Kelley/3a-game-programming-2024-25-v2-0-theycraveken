@@ -50,11 +50,11 @@ putting a # in front of 15 different lines.
 while playerScore < 5 and cpuScore < 5: 
     print(f"{playerName} you have {playerScore} points.\nThe CPU has {cpuScore} points.\n") 
     playerChoice = input("Please enter rock, paper, or scissors and press enter.\n").lower()
-    if playerChoice != "rock" and playerChoice != "paper" and playerChoice != "scissors"
+    if playerChoice != "rock" and playerChoice != "paper" and playerChoice != "scissors":
         playerChoice = input("Please enter rock, paper, or scissors and press eneter.\n").lower() 
-         if playerChoice != "rock" and playerChoice != "paper" and playerChoice != "scissors":
-        print("You are not following directions. Please try again.\n")
-        exit()
+        if playerChoice != "rock" and playerChoice != "paper" and playerChoice != "scissors":
+            print("You are not following directions. Please try again.\n")
+            exit()
     print(f"You have chosen {playerChoice}.\n")
 else: 
     print(f"You have chosen {playerChoice}.\n")
@@ -75,17 +75,62 @@ else:
     #print(f"CPU Choice: {cpuChoice}") 
 
 
-    # compare player choice to cpu choice 
-    if playerChoice == "rock" and cpuChoice == "paper"
-        pass
-        #CPU WINS 
-    elif playerChoice == "rock" and cpuChoice == "scissors"
+    # compare player choice to cpu choice
+    if playerChoice=="rock" and cpuChoice == "paper":
+        # CPU WINS
         print(f"The CPU chose {cpuChoice} and you chose {playerChoice}.\n")
-        print("You win a ponit.\n")
-        playerScore += 1  
-        # PLAYER WINS 
+        print("The Cpu wins a point.\n")
+        cpuScore +=1
+    elif playerChoice == "rock" and cpuChoice ==" scissors":
+        # PLAYER WINS
+        print(f" The CPU chose {cpuChoice} and you chose {playerChoice}.\n")
+        print("You win a point.\n")
+        playerScore +=1
+    elif playerChoice == "rock" and cpuChoice == "rock":
+        # Draw
+        print(f"The CPU chose {cpuChoice}and you chose {playerChoice}.\n")
+        print("It's a draw!\n")
+    elif playerChoice == "scissors" and cpuChoice == "rock":
+        # CPU WINS  
+        print(f"The CPU chose {cpuChoice} and you chose {playerChoice}.\n")
+        print("The CPU wins a point.\n")
+        cpuScore += 1
+    elif playerChoice == "scissors" and cpuChoice == "paper":
+        # PLAYER WINS
+        print(f"The CPU chose {cpuChoice}and you chose {playerChoice}.\n")
+        print("you win a point.\n")
+        playerScore += 1
+    elif playerChoice == "scissors" and cpuChoice == "scissors":
+        # DRAW
+        print(f"The CPU chose {cpuChoice} and you chose {playerChoice}. \n")
+        print("It's a draw! \n")
+    elif playerChoice =="paper" and cpuChoice == "rock":
+        # PLAYER WINS
+        print(f"The CPU chose {cpuChoice}and you chose {playerChoice}. \n")
+        print("You win a point. \n")
+        playerScore += 1
+    elif playerChoice == "paper" and cpuChoice == "paper":
+        # DRAW
+        print(f"The CPU chose {cpuChoice} and you chose {playerChoice}. \n")
+        print ("It's a draw! \n")
+    elif playerChoice == "paper" and cpuChoice == "scissors" :
+        # CPU WINS
+        print (f"The CPU chose {cpuChoice}and you chose {playerChoice}. \n")
+        print ("The CPU wins a point. \n" )
+        cpuScore += 1
+    else:
+        print ("Unable to determine a winner. Please restart. \n")
+    exit()
 
-    elif playerChoice == "rock"
+
+    print(f"Your Final Score: {playerScore}CPU Final Score: {cpuScore}\n")
+    if playerscore > cpuScore:
+        print (f"Congratulations {playerName}, a winner is you! \n")
+    elif cpuScore > playerscore:
+        print (f"CPU wins. You are a disappointment to all. \n")
+    else:
+        print("Unable to determine a winner. (nPlease restart. \n")
+    exit()
 
 
 

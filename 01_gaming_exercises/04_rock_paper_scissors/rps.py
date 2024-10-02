@@ -56,8 +56,8 @@ while playerScore < 5 and cpuScore < 5:
             print("You are not following directions. Please try again.\n")
             exit()
     print(f"You have chosen {playerChoice}.\n")
-else: 
-    print(f"You have chosen {playerChoice}.\n")
+   # else: 
+        #print(f"You have chosen {playerChoice}.\n")
     
     
     

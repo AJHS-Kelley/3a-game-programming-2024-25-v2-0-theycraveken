@@ -120,16 +120,20 @@ else:
         cpuScore += 1
     else:
         print ("Unable to determine a winner. Please restart. \n")
-    exit()
+        exit()
 
 
-    print(f"Your Final Score: {playerScore}CPU Final Score: {cpuScore}\n")
-    if playerscore > cpuScore:
-        print (f"Congratulations {playerName}, a winner is you! \n")
-    elif cpuScore > playerscore:
-        print (f"CPU wins. You are a disappointment to all. \n")
-    else:
-        print("Unable to determine a winner. (nPlease restart. \n")
+
+
+
+
+print(f"Your Final Score: {playerScore}CPU Final Score: {cpuScore}\n")
+if playerScore > cpuScore:
+    print (f"Congratulations {playerName}, a winner is you! \n")
+elif cpuScore > playerScore:
+    print (f"CPU wins. You are a disappointment to all. \n")
+else:
+    print("Unable to determine a winner. \nPlease restart. \n")
     exit()
 
 

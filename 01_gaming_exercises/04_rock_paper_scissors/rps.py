@@ -40,7 +40,7 @@ The cpu will select ROCK, PAPER or SCISSORS at randoms.
 """) 
 
 #Multi-LINE STRINGS CAN BE USED AS BIG COMMENTS
-"""" 
+""" 
 Anything in between the sets of a double quotes is just ignored.
 If you need to write large comments, it's easier to use multi-line strings than 
 putting a # in front of 15 different lines.
@@ -62,7 +62,7 @@ while playerScore < 5 and cpuScore < 5:
     
     
  # let cpu select choice at random 
-    cpuChoice = random .randint(0, 2)    #randomly select 0, 1, 0r 2. 
+    cpuChoice = random.randint(0, 2)    #randomly select 0, 1, 0r 2. 
     if cpuChoice == 0:
         cpuChoice = "rock"
     elif cpuChoice == 1: 
@@ -81,7 +81,7 @@ while playerScore < 5 and cpuScore < 5:
         print(f"The CPU chose {cpuChoice} and you chose {playerChoice}.\n")
         print("The Cpu wins a point.\n")
         cpuScore +=1
-    elif playerChoice == "rock" and cpuChoice ==" scissors":
+    elif playerChoice == "rock" and cpuChoice == "scissors":
         # PLAYER WINS
         print(f" The CPU chose {cpuChoice} and you chose {playerChoice}.\n")
         print("You win a point.\n")
@@ -104,7 +104,7 @@ while playerScore < 5 and cpuScore < 5:
         # DRAW
         print(f"The CPU chose {cpuChoice} and you chose {playerChoice}. \n")
         print("It's a draw! \n")
-    elif playerChoice =="paper" and cpuChoice == "rock":
+    elif playerChoice == "paper" and cpuChoice == "rock":
         # PLAYER WINS
         print(f"The CPU chose {cpuChoice}and you chose {playerChoice}. \n")
         print("You win a point. \n")

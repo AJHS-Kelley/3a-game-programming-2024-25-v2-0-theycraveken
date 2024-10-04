@@ -49,16 +49,16 @@ while loopCount < loopsReq:
         exit()
 
     # compare player choice to cpu choice 
-    if playerChoice == "rock" and cpuChoice == "paper"
+    if playerChoice == "rock" and cpuChoice == "paper":
         pass
         #CPU WINS 
-    elif playerChoice == "rock" and cpuChoice == "scissors"
+    elif playerChoice == "rock" and cpuChoice == "scissors":
         print(f"The CPU chose {cpuChoice} and you chose {playerChoice}.\n")
         print("You win a ponit.\n")
         playerScore += 1  
         # PLAYER WINS 
 
-    elif playerChoice == "rock"
+    elif playerChoice == "rock":
 
 
 

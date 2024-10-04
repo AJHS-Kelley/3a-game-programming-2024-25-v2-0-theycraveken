@@ -57,4 +57,8 @@ while playerscore < 199: # Run as long as this true.
     playerscore += random.randint(1,100)
     print(f"After: {playerscore}")
     counter += 1
-print(f" Counter: {counter}")
+print(f" Counter: {counter}") 
+
+
+
+loopCount = 0 

@@ -1,4 +1,4 @@
-# Rock, Paper, Scissors, Kennedy Spencer v0.1
+# Rock, Paper, Scissors, Kennedy Spencer v3.0
 
 # MODULE IMPORTS
 import random 

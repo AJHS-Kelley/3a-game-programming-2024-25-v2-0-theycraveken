@@ -12,18 +12,22 @@ playerChoice = None
 cpuScore = 0
 cpuChoice = None
 
-# PLAYER NAME INOUT 
-playerName = input("Please type your name and press enter.\n")
-print(f"Hello{playerName}!\n")
-isCorrect = input("Is that correct? Type yes or no and press enter.\n").lower()
+# PLAYER NAME INPUT 
+def playerName(): # Function Singnature -- name of function, (arguments if any)
+    playerName = input("Please type your name and press enter.\n")
+    print(f"Hello{playerName}!\n")
+    isCorrect = input("Is that correct? Type yes or no and press enter.\n").lower()
 
 # .lower() can turn ALL input into lowercase.
 # .upper() can turn ALL input into UPPERCASE.
 
-if isCorrect == "yes": 
-    print(f"ok {playerName}, let's play Rock, Paper, Scissors!\n")
-else:
-    playerName = input("Please type your name and press enter.\n")
+    if isCorrect == "yes": 
+        print(f"ok {playerName}, let's play Rock, Paper, Scissors!\n")
+    else:
+        playerName = input("Please type your name and press enter.\n")
+
+# CALLING THE FUNCTION
+playerName() 
 
 # THE RULES using MULTI-LINE STRINGS
 print(""""

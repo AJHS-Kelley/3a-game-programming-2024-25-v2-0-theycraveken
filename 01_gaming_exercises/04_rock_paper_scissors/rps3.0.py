@@ -1,4 +1,4 @@
-# Rock, Paper, Scissors, Kennedy Spencer v3.0
+# Rock, Paper, Scissors, Kennedy Spencer v3.1
 
 # MODULE IMPORTS
 import random 
@@ -19,24 +19,20 @@ def playerName() -> str: # Function Singnature -- name of function, (arguments i
     playerName = input("Please type your name and press enter.\n")
     print(f"Hello{playerName}!\n")
     isCorrect = input("Is that correct? Type yes or no and press enter.\n").lower()
-
     if isCorrect == "yes": 
         print(f"ok {playerName}, let's play Rock, Paper, Scissors!\n")
     else:
         playerName = input("Please type your name and press enter.\n")
     return playerName 
 
-# CALLING THE FUNCTION
-playerName = playerName()
-
 # THE RULES using MULTI-LINE STRINGS 
 def rules() -> None: 
     """This function prints the rules for rock, paper, scissors."""
     print(f"""
-    Welcome to Rock, Paper, Scissors Robot!
+    Welcome {playerName} to Rock, Paper, Scissors Robot!
     It's Time to play Rock, Paper, Scissors!
 
-    You will play against the CPU. The first to score 3 points wins.
+    You will play against the CPU. The first to score 5 points wins.
     You will select from ROCK, PAPER, or SCISSORS.
     The cpu will select ROCK, PAPER or SCISSORS at randoms. 
       
@@ -49,18 +45,32 @@ def rules() -> None:
 # IF NO, A return STATEMENT IS NOT REQUIRED
 
 def playerChoice() -> str:
-    """Allows the CPU to choose rock, paper, scissors."""
+    """Allows the player to choose rock, paper, scissors."""
     playerChoice = input("Please enter rock, paper, or scissors and press enter.\n").lower()
     if playerChoice != "rock" and playerChoice != "paper" and playerChoice != "scissors":
         playerChoice = input("Please enter rock, paper, or scissors and press eneter.\n").lower() 
         if playerChoice != "rock" and playerChoice != "paper" and playerChoice != "scissors":
             print("You are not following directions. Please try again.\n")
             exit()
-    print(f"You have chosen {playerChoice}.\n")
+        print(f"You have chosen {playerChoice}.\n")
+    else:
+        print(f"You have chosen {playerChoice}.\n")
     return playerChoice
 
-
-
+def cpuChoice() -> str: 
+    """Allows the CPU to choose rock, paper, scissors."""
+    cpuChoice = random.randint(0, 2)    #randomly select 0, 1, 0r 2. 
+    if cpuChoice == 0:
+        cpuChoice = "rock"
+    elif cpuChoice == 1: 
+        cpuChoice = "scissors"
+    elif cpuChoice == 2: 
+        cpuChoice = "paper" 
+    else: 
+        print("Unable to determine CPU choice.\nPlease restart.\n")
+        exit()
+    return cpuChoice 
+    #print(f"CPU Choice: {cpuChoice}")
 #MAIN GAME LOOP 
 while playerScore < 5 and cpuScore < 5: 
     print(f"{playerName} you have {playerScore} points.\nThe CPU has {cpuScore} points.\n") 

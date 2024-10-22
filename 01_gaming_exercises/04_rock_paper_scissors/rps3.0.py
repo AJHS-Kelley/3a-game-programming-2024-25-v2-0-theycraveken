@@ -1,4 +1,4 @@
-# Rock, Paper, Scissors, Kennedy Spencer v3.2
+# Rock, Paper, Scissors, Kennedy Spencer v3.3c
 
 # MODULE IMPORTS
 import random 
@@ -132,16 +132,32 @@ def score(winner: str) -> int:
         score = 0 
     return score 
 
-print(f"Your Final Score: {playerScore} CPU Final Score: {cpuScore}\n")
-if playerScore > cpuScore:
-    print (f"Congratulations {playerName}, a winner is you! \n")
-elif cpuScore > playerScore:
-    print (f"CPU wins. You are a disappointment to all. \n")
-else:
-    print("Unable to determine a winner. \nPlease restart. \n")
-    exit()
+def matchWinner(playerScore: int, cpuScore: int) -> bool:
+    """This function determines if a player has won the game or not by scoring 5 points."""
+    if playerScore >= 5:
+        print("Congratulations! You are the winner.\n")
+        return True 
+    elif cpuScore >= 5:
+        print("Sadly, you have been defeated by the CPU.\n")
+        return True 
+    else: #No winner yet.
+        return False 
+    
+def playGame(playerScore: int, cpuScore: int) -> None:
+    """This function will use all other functions to play Rock, Paper, Scissors. """
+    while True:
+        cpuPick = cpuChoice()
+        playerPick = playerChoice()
+        roundWinner = pickWinner(playerPick, cpuPick)
+        if roundWinner == "Player Wins":
+            playerScore += score(roundWinner)
+        if roundWinner == "CPU Wins":
+            cpuScore += score(roundWinner)
 
+        print(f"Player Score: {playerScore}\n")
+        print(f"CPU Score: {cpuScore}\n")
 
+        if matchWinner(playerScore, cpuScore) == True:
+            break
 
-    # print the results to the screen 
-    # award point to winner and output results.
+playGame(playerScore, cpuScore)

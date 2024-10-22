@@ -122,10 +122,15 @@ def pickWinner(playerChoice: str, cpuChoice: str) -> str:
         print ("Unable to determine a winner. Please restart. \n")
         exit()
 
-
-
-
-
+def score(winner: str) -> int:
+    """This function uses the winner to update the score for CPU, Num. DRAWS, and player score."""
+    if winner == "Player Wins":
+        score = 1
+    elif winner == "CPU Wins":
+        score = 1 
+    else: # This is a DRAW. 
+        score = 0 
+    return score 
 
 print(f"Your Final Score: {playerScore} CPU Final Score: {cpuScore}\n")
 if playerScore > cpuScore:

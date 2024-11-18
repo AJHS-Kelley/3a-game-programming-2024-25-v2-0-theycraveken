@@ -3,6 +3,30 @@
 
 import random
 import time
+import datetime
+
+# SAVONG DATA TO A FILE 
+# STEP 1 -- creating the file name to use.
+logFileName = "dragonRealmLog" + str(time.time()) + ".txt"
+#logFileName = "dragonRealmLog.txt"
+# Example: dragonRealmLog1132AM.txt 
+
+# Step 2 -- Create/ open the file to save the data 
+saveData = open(logFileName, "a")
+# FILE MODES
+# "x" Creates file, if file exist, exit with erroe message.
+# "w" Creates file, if file exist, erase and overwrite file contents.
+# "a" Creates file, if file exists, append data to the file.
+
+saveData.write("GAME STARTED" + " " + str(datetime.datetime.now()) + "\n")
+
+
+
+
+
+
+
+
 
 def displayIntro():
 
@@ -17,6 +41,19 @@ def chooseMap():
     while map1 != '1' and map2 != '2':
         print('Which map will you go choose? (1 or 2)')
         map = input()
+        if map1 == '1':
+            print("Excellent choice my friend!....")
+            time.sleep(2)
+            print("You're entering the Army......")
+            time.sleep(2)
+        elif map2 == '2':
+            print("Interesting choice my friend.....")
+            time.sleep(2)
+            print("I see you like to suffer...")
+            time.sleep(2)
+            print("lets see if you can escape!")
+        else: 
+            input("Please enter a valid number in order to continue.\n")
     return map
 
 map1 = 'Army' 
@@ -55,3 +92,10 @@ while playAgain == 'yes' or playAgain == 'y':
     checkMap(mapNumber)
     print('Do you want to play again? (yes or no)')
     playAgain = input()
+
+
+
+
+
+    # CLOSE THE FILE 
+saveData.close()

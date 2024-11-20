@@ -33,22 +33,22 @@ def displayIntro():
     print('You are on the moon with the aliens. In front of you,')
     print('you see two portal maps. In one map, you go to the army where its fun')
     print('and the people will treasure you with love. The other map Ancient')
-    print('is full of slaves, and will torcher and kill you.')
+    print('is full of slaves, and will torcher and kill you... you may have an option to escape.')
     print()
 
 def chooseMap():
     map = ''
-    while map != '1' and map != '2':
-        print('Which map will you go choose? (1 or 2)')
-        map = input()
-        print(' If choose ')
+    print('Choose if you dare....\n ')
+    print('{1} You will teleport to the Army!\n{2} You will teleport to the Ancient world\n')
+    print('Which map will you go choose? (1 or 2)')
+    print('Insert the number of your desired map and press PLAY.\n')
+    map = input()
     return map
     
 
 
-
 def checkMap(map):
-    if map == '1':
+   while map != '1' and map != '2':
         if map == '1':
             saveData.write('Player choose the Army')
             print('Excellent choice my friend!....')
@@ -63,14 +63,14 @@ def checkMap(map):
             print('lets see if you can escape!')
         else: 
             input('Please enter a valid number in order to continue.\n')
-    return map
+        return map
 
-    friendlyMap = random.randint(1, 2)
+friendlyMap = random.randint(1, 2)
 
-    if map == str(friendlyMap):
+if map == str(friendlyMap):
         print('Gives you his treasure!')
 
-    else:
+else:
         print('Gobbles you down in one bite!')
 
 

@@ -35,7 +35,7 @@ def chooseMap():
         print('Choose if you dare....\n ')
         print('{1} You will teleport to the Army!\n{2} You will teleport to the Ancient world\n')
         print('Which map will you go choose? (1 or 2)')
-        print('Insert the number of your desired map and press PLAY.\n')
+        print('Insert the number of your desired map and press GO.\n')
         map = input()
         print(map)
     return map
@@ -60,11 +60,26 @@ def checkMap(map):
             input('Please enter a valid number in order to continue.\n')
     return map
 
-def checkitems():
-    items = ""
-    while items != "11" and items != "21":
-        print("You may need some items to get you through your journey...")
-        print("{11} For the Army you can choose a ")
+def chooseitems():
+    items = ''
+    while items != '11' and items != '21' and items != '31' and items != '41':
+        print('You may need some items to get you through your journey...')
+        print('{11} For the Army you can choose a Teddy Bear.\n{21} You may choose a toiltries.\n{31} You can choose a sword for Anicent.\n{41} You can choose Bomb.\n')
+        print('Pick your choices wisley......')
+        print('Which item will you choose? (11, 21, 31, 0r 41)')
+        print('Insert the number of your desired item and press play.\n')
+        items = input()
+    return items
+
+def checkitems(): 
+
+    if items == '11':
+        print('You have choosen the Teddy bear.')
+        time.sleep(2)
+        print('The Teddy Bear is your bestfriend that comes to life in your alone time')
+        print('As your in the Army getting all the love and all the fun you can get, the Teddy Bear is a life long partner that grants all your wishes!')
+        time.sleep(2)
+    elif items == '21': 
 
 
 

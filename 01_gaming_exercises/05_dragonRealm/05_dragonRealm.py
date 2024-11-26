@@ -77,50 +77,16 @@ def chooseitems():
         items = input()
     return items
 
-def checkitems(items): 
 
-    if items == '11':
-        print('You have choosen the Teddy bear.')
-        hasTeddybear = True 
-        time.sleep(2)
-        print('The Teddy Bear is your bestfriend that comes to life in your alone time')
-        print('As your in the Army getting all the love and all the fun you can get, the Teddy Bear is a life long partner that grants all your wishes!')
-        time.sleep(2)
-    elif items == '21':
-        print('You have choosen the Toiletries')
-        hasToiletries = True 
-        time.sleep(2)
-        print('The toileties bag is a potion to always make you look nice.')        
-        print('Being that you will always look nice and can choose your style the people will love you unconditionally and will treat you like a King or Queen 4 Life!')
-        time.sleep(2)
-        if hasToiletries == True: 
-            print('You are able to always look nice and smell nice whenever you want.')
-        elif hasToiletries == False:
-            print('You Will Never be good again and they will not like you anymore!')
-    elif items == '31':
-        print('You have chosen a Sword for the Anicent World.')
-        time.sleep(2)
-        print('You will need to sword to kill the slaves and guards in a timely manner.')
-        print('If you can defeat all the slaves and guards in time you WIN and can escape!')
-        time.sleep(2)
-        print('If not you loose and will be killed!')
-    elif items == '41':
-        print('You have choosen The Bomb!') 
-        hasBomb = True 
-        time.sleep(2)
-        print('For the Bomb you will have to find a nice place to plant it with our getting caught...')
-        print('If you plant the bomb in time you WIN and can escape.')
-        print('If you fail to plant the bomb in a timely manner or get caught you loose and will be killed!')
-    else:
-        input('Please enter a valid number\n')
-    return items  
+
+
+
+
 
 
 
 
 # I TRIED I GOT REALLY CONFUSED BUT I THINK I DID IT SOMEWHAT CORRECT!
-
-
 
 
 playAgain = 'yes'
@@ -131,11 +97,41 @@ while playAgain == 'yes' or playAgain == 'y':
     print(mapNumber)
     checkMap(mapNumber)
     items = chooseitems()
-    checkitems(items)
+    if mapNumber == '1' and items == '11':
+        print('You have choosen the Teddy bear.')
+        time.sleep(2)
+        print('The Teddy Bear is your bestfriend that comes to life in your alone time')
+        print('As your in the Army getting all the love and all the fun you can get, the Teddy Bear is a life long partner that grants all your wishes!')
+        time.sleep(2)
+        pass 
+    elif mapNumber == '1' and items == '21':
+        print('You have choosen the Toiletries')
+        time.sleep(2)
+        print('The toileties bag is a potion to always make you look nice.')        
+        print('Being that you will always look nice and can choose your style the people will love you unconditionally and will treat you like a King or Queen 4 Life!')
+        time.sleep(2)
+        pass
+    elif mapNumber == '1' and items != '21' and  items != '11':
+        print('You can only use the items listed for the Army!') 
+        pass 
+    elif mapNumber == '2' and items == '31':
+        print('You have chosen a Sword for the Anicent World.')
+        time.sleep(2)
+        print('You will need to sword to kill the slaves and guards in a timely manner.')
+        print('If you can defeat all the slaves and guards in time you WIN and can escape!')
+        time.sleep(2)
+    elif mapNumber == '2' and items == '41':
+        print('You have choosen The Bomb!') 
+        time.sleep(2)
+        print('For the Bomb you will have to find a nice place to plant it with our getting caught...')
+        print('If you plant the bomb in time you WIN and can escape.')
+        print('If you fail to plant the bomb in a timely manner or get caught you loose and will be killed!') 
+    elif mapNumber == '2' and items != '31' and items != '41':
+        print('You can only use the items listed for the Ancient World!')
+    else: 
+        print('Please enter  valid number.\n')
     print('Do you want to play again? (yes or no)')
     playAgain = input()
-
-
 
 
 

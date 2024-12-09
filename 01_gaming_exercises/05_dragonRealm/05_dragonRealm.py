@@ -1,6 +1,6 @@
 # Dragon Realm, <Kennedy Spencer>, v0.1
 # Based on https://inventwithpython.com/chapter6.html by Al Sweigart
-
+# Good job Kennedy.  This was a tough project but you never quit on it.  
 import random
 import time
 import datetime
